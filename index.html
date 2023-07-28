@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .habilidades {
+            text-align: center;
+        }
+        .habilidades h2 {
+            font-size: 24px; /* Aumentar el tamaño del título "Habilidades" */
+        }
+        .habilidades-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px; /* Espacio entre las habilidades */
+            margin: 0 auto; /* Centrar el bloque de habilidades horizontalmente */
+            max-width: 800px; /* Limitar el ancho del bloque para mejor centrado en pantallas grandes */
+        }
+        .habilidad {
+            display: flex;
+            align-items: center;
+            font-size: 20px; /* Aumentar el tamaño de la letra de la habilidad */
+            width: 25%; /* Ancho de cada habilidad para dividir en 4 columnas */
+        }
+        .habilidad i {
+            font-size: 60px; /* Aumentar el tamaño del ícono */
+            color: #e5ff00;
+            margin-right: 15px; /* Espacio entre el ícono y el texto de la habilidad */
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#inicio">Santiago Rivas Gomez</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/perfil.jpg" alt="">
+            </div>
+            <h1>Santiago Rivas Gomez</h1>
+            <h2>Ingeniero de Software</h2>
+            <div class="redes">
+                <div class="redes">
+                    <a href="https://www.facebook.com/santiago.rivasgomez"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/santiagorivasg4"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/santiago-rivas-gomez-745278240/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Sargo258"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Santaiago Rivas Gomez.</span> Soy estudiante de ingeniería de software y actualmente cursando el ultimo semestre. Soy desarrollador frontend con conocimientos en backend como PostgreSQL y MySQL. Me encanta el desarrollo de software, disfruto mucho de diseñar y descubrir nuevos estilos , soy muy bueno trabajando en equipo
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Teléfono</strong>
+                            3156192989
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            santiagorg218@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Neiva-Huila , Colombia
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-code"></i> <!-- Cambio de logo a desarrollo -->
+                            <span>DESARROLLO</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-robot"></i> <!-- Cambio de logo a machine learning -->
+                            <span>MACHINE LEARNING</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-database"></i> <!-- Cambio de logo a bases de datos -->
+                            <span>BASES DE DATOS</span>
+                        </div>
+                        <!-- Los otros intereses siguen igual -->
+                        <!-- ... -->
+                    </div>
+                </div>
+        <button>
+            <a href="pdf/HV.pdf" download>Descargar CV</a>
+            <span class="overlay"></span>
+        </button>
+                  
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="habilidades">
+                <h2>Habilidades</h2>
+                <div class="habilidades-lista">
+                    <div class="habilidad"><i class="fab fa-html5"></i> HTML</div>
+                    <div class="habilidad"><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div class="habilidad"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="habilidad"><i class="fab fa-python"></i> Python</div>
+                    <div class="habilidad"><i class="fas fa-database"></i> MySQL</div>
+                    <div class="habilidad"><i class="fas fa-database"></i> PostgreSQL</div>
+                    <div class="habilidad"><i class="fas fa-toolbox"></i> pgAdmin</div>
+                    <div class="habilidad"><i class="fas fa-robot"></i> Machine Learning</div>
+                    <div class="habilidad"><i class="fab fa-git"></i> Git</div> 
+                    <!-- Agrega más habilidades según sea necesario -->
+                </div>
+            </div>                 
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item">
+                        <h4>Ingenieria de software</h4>
+                        <span class="casa">Universidad surcolmbiana</span>
+                        <span class="fecha">2018 - 2023</span>
+                        <p>En este programa entenderemos la Ingeniería de Software como la disciplina que integra el proceso, los métodos, y las herramientas para obtener económicamente un software confiable y que funcione de modo eficiente, 
+                            incluida la documentación requerida para su diseño, desarrollo, operación y mantenimiento.</p>
+                    </div>
+                    <div class="item">
+                        <h4>Scrum Fundamentals certified</h4>
+                        <span class="casa">SCRUMstudy</span>
+                        <span class="fecha">2021</span>
+                        <div class="descargar">
+                            <div class="overlay"></div>
+                            <!-- Reemplaza 'ruta_del_archivo' con la URL de tu archivo -->
+                            <a href="pdf/Scrum.pdf" download>
+                              <button>Descargar</button>
+                            </a>
+                        </div> 
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h4>Curso profesional de GIT y GITHUB</h4>
+                        <span class="casa">Platzi</span>
+                        <span class="fecha">2022</span>
+                        <div class="descargar">
+                            <!-- Reemplaza 'ruta_del_archivo' con la URL de tu archivo -->
+                            <a href="pdf/Git-github.pdf" download>
+                              <button>Descargar</button>
+                            </a>
+                            <div class="overlay"></div>
+                        </div> 
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h4>Curso definitivo html y css</h4>
+                        <span class="casa">Platzi</span>
+                        <span class="fecha">2022</span>
+                        <div class="descargar">
+                            <!-- Reemplaza 'ruta_del_archivo' con la URL de tu archivo -->
+                            <a href="pdf/Html-css.pdf" download>
+                              <button>Descargar</button>
+                            </a>
+                            <div class="overlay"></div>
+                        </div> 
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h4>Machine learning</h4>
+                        <span class="casa">Cursera</span>
+                        <span class="fecha">2022</span>
+                        <div class="descargar">
+                            <!-- Reemplaza 'ruta_del_archivo' con la URL de tu archivo -->
+                            <a href="pdf/Maching-learning.pdf" download>
+                              <button>Descargar</button>
+                            </a>
+                            <div class="overlay"></div>
+                        </div> 
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h4>Introducion a React</h4>
+                        <span class="casa">Platzzi</span>
+                        <span class="fecha">2022</span>
+                        <div class="descargar">
+                            <!-- Reemplaza 'ruta_del_archivo' con la URL de tu archivo -->
+                            <a href="pdf/React.pdf" download>
+                              <button>Descargar</button>
+                            </a>
+                            <div class="overlay"></div>
+                        </div> 
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item">
+                        <h4>Pasante - Apoyo a la gestión</h4>
+                        <span class="casa">Gobernacion del Huila</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>Apoyar al sistema administrativo de planeación de la gobernación del Huila en la creación en ambiente local del esquema de base de datos en MYSQL del sistema de información SIR-SIGDEHU.
+                            Apoyar al sistema administrativo de planeación en la creación del diccionario de datos del sistema de información SIR.
+                            Ayudar en el diseño y estructuración de la base de datos del sistema SIGDEHU.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <a href="https://github.com/Sargo258/portafolios.git">
+                        <img src="img/portafolio.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Diseño Creativo</h3>
+                            <p>portafolio V1</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <a href="https://github.com/Sargo258/Organizador-de-tareas.git">
+                        <img src="img/Todos.jpg" alt="">
+                        <div class="overlay">
+                            <h3>Organizador</h3>
+                            <p>de tareas</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <a href="https://github.com/Sargo258/tomates-IA.git">
+                        <img src="img/tomate.JPG" alt="">
+                        <div class="overlay">
+                            <h3>Diseño de IA</h3>
+                            <p>Vison artifical</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/santiago.rivasgomez"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/santiagorivasg4"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/santiago-rivas-gomez-745278240/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Sargo258"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
