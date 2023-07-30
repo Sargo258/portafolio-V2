@@ -195,7 +195,7 @@ html{
     justify-content: center;
     transition: .3s;
 }.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
+    background-color: #21d62a;
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
@@ -222,7 +222,7 @@ html{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #e5ff00;
+    background-color: #21d62a;
     z-index: -1;
     transition: 1s;
 }
@@ -391,11 +391,27 @@ a {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #21d62a;
+    background-color: #0eec15;
     float: left;
     position: relative;
     bottom: 4px;
 }
+.descargar button {
+    background-color: #21d62a; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno (arriba/abajo izquierda/derecha) */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilos para el botón al pasar el mouse por encima */
+.descargar button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+
 /* SECCION PORTFOLIO */
 .portfolio{
     background-color: #252A2E;
