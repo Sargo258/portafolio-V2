@@ -48,7 +48,7 @@ html{
     color: #21d62a;
 }
 .nav-responsive{
-    background-color: #e5ff00;
+    background-color: #21d62a;
     color:#fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -198,8 +198,15 @@ html{
     background-color: #21d62a;
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 10px;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes span {
+    font-size: 13px; /* Ajusta el tamaño de la letra según tus preferencias */
+    text-align: center;
+    margin: 0px; /* Ajusta el margen según tus preferencias */
+    padding: 0px; /* Ajusta el espaciado interior según tus preferencias */
 }
 
 .sobremi button {
@@ -269,26 +276,29 @@ a {
 }
 .habilidad {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-size: 20px; /* Aumentar el tamaño de la letra de la habilidad */
-    width: 25%; /* Ancho de cada habilidad para dividir en 4 columnas */
+    flex-basis: 25%; /* Ancho de cada habilidad para dividir en 4 columnas en pantallas grandes */
 }
+
 .habilidad i {
     font-size: 60px; /* Aumentar el tamaño del ícono */
     color: #e5ff00;
-    margin-right: 15px; /* Espacio entre el ícono y el texto de la habilidad */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto de la habilidad */
 }
 
 @media screen and (max-width: 768px) {
     .habilidades-lista {
-      flex-direction: column; /* Cambiar a una columna en pantalla pequeña */
+        flex-direction: row;
+        justify-content: space-between; /* Alinear elementos en dos columnas */
     }
   
+    /* Establecer ancho para cada habilidad en dos columnas */
     .habilidad {
-      flex: 1 0 100%; /* Ocupar todo el ancho en pantalla pequeña */
+        flex-basis: calc(50% - 12.5px); /* Restar el espacio entre habilidades */
     }
-  }
-
+}
 
 /* SECCION CURRICULUM */
 .curriculum{
